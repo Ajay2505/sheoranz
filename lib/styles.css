@@ -1,0 +1,548 @@
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/Helvetica/MyFontRegular.woff2') format('woff2'),
+        url('../fonts/Helvetica/MyFontRegular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --dark_color: #252324;
+    --light_color: #fffcf5;
+    --font-helvetica: "helvetica", "Helvetica Neue","Roboto","Arial",sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: var(--light_color);
+    background-color: var(--dark_color);
+}
+
+.rev_select *::selection {
+    color: var(--dark_color);
+    background-color: var(--light_color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--dark_color);
+    background-color: var(--light_color);
+    font-family: var(--font-helvetica);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 7px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+img, video {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* Target the specific number input and hide the spin buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox, you may need this additional CSS rule */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    width: fit-content;
+    color: inherit;
+    transition: opacity .2s ease-in-out;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+hr {
+    border-color: #252324;
+}
+
+.w-screen {
+    width: 100vw;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.dark_color {
+    color: var(--dark_color);
+}
+
+.green_color {
+    color: #53B42D;
+}
+
+.red_color {
+    color: #E23E32;
+}
+
+/* ---------------------------------- GLOBALS  START  ---------------------------------------------- */
+
+
+/* ---------------------------------- LENIS START  ---------------------------------------------- */
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+/* ---------------------------------- LENIS END  ---------------------------------------------- */
+
+
+
+/* ---------------------------------- UTILS   ---------------------------------------------- */
+
+.main_spacer {
+    padding-block: 130px;
+}
+
+.main_spacer_top {
+    padding-top: 130px;
+}
+
+.main_spacer_bottom {
+    padding-bottom: 130px;
+}
+
+.large_heading {
+    font-size: clamp(7vh, 10vw, 30vh);
+}
+
+.main_heading {
+    font-size: clamp(37px, 5vw, 90px) !important;
+}
+
+.sec_heading {
+    font-size: clamp(27px, 5vw, 45px) !important;
+}
+
+.sub_heading {
+    font-size: clamp(20px, 5vw, 25px) !important;
+}
+
+.text_xs {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 1750px) {
+    .col-3xl-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }    
+    .max-w-container-3xl {
+        max-width: 1320px;
+    }
+}
+
+.dark_bg {
+    color: var(--light_color);
+    background-color: var(--dark_color);
+}
+
+.text_wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.text_wrapper > * {
+    transform: translateY(100%);
+    transform-origin: top;
+    transition: transform .4s ease-in-out;
+}
+
+.hoverTextRepeater, .hoverBgBtn {
+    overflow: hidden;
+    position: relative;
+    color: var(--dark_color);
+    padding: 10px 30px;
+    border-radius: 24px;
+}
+
+.hoverTextRepeater > *:first-child,
+.hoverBgBtn > *:first-child {
+    display: inline-block;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.hoverTextRepeater:hover > *:first-child,
+.hoverBgBtn:hover > *:first-child {
+    transform: translateY(-15px);
+    opacity: 0;
+}
+
+.hoverTextRepeater > *:last-child {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: top .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.hoverTextRepeater:hover > *:last-child {
+    top: 10px;
+    opacity: 1;
+}
+
+.main_dot {
+    display: flex;
+    align-items: start;
+    gap: 0 7px;
+    position: relative;
+}
+
+.main_dot::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-color: var(--light_color);
+}
+
+.main_dot.black::before {
+    background-color: var(--dark_color);
+}
+
+.hoverBgBtn {
+    min-width: 350px;
+    border: 1px solid rgba(37, 35, 36, 0.2);
+    padding: 10px 30px;
+    background-color: transparent;
+}
+
+.hoverBgBtn > *:last-child {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--light_color);
+    background-color: var(--dark_color);
+    transform: translateY(100%);
+    transition: transform .35s ease-in-out;
+}
+
+.hoverBgBtn:hover > *:last-child {
+    transform: translateY(0);
+}
+
+.hoverScaleImg,
+.hoverImgWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.hoverScaleImg:hover img {
+    transform: scale(1.07);
+}
+
+.hoverImgWrapper img,
+.hoverScaleImg img {
+    user-select: none;
+    transition: transform .3s ease-in-out;
+}
+
+.hoverImgWrapper .absolute_block {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    padding: 20px;
+    opacity: 0;
+    display: flex;
+    align-items: end;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    background-color: #fffcf54a;
+    transition: opacity .4s ease-in-out, filter 3s ease-in-out;
+}
+
+.hoverImgWrapper:hover .absolute_block {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .4s ease-in-out, filter 3s ease-in-out;
+}
+
+.hoverImgWrapper:hover img {
+    transform: scale(1.2);
+}
+
+.dark_bg hr {
+    
+}
+/* ---------------------------------- UTILS END  ---------------------------------------------- */
+
+
+
+/* ---------------------------------- COMMON BLOCKS CSS  ---------------------------------------------- */
+.large_heading_block .large_heading .text .text_xs {
+    top: 30%;
+}
+
+.large_heading_block .large_heading .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 100%, 0 100%, 0 60%); */
+}
+
+.large_heading_block .large_heading .icon svg.plus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: rgb(37, 35, 36);
+    transform: translate(-50%, -50%);
+    /* padding-inline: 20px; */
+}
+
+.large_heading_block .large_heading .icon svg {
+    color: transparent;
+    transition: color .3s ease-in-out;
+}
+
+.large_heading_block:hover .large_heading .icon svg.plus {
+    color: #fff;
+}
+
+.large_heading_block:hover .large_heading .icon svg {
+    /* color: rgba(37, 35, 36, 1); */
+    color: #333333;
+}
+
+.large_heading_block .large_heading .icon svg path {
+    transition: d .5s ease-in-out;
+}
+
+/* ---------------------------------- COMMON BLOCKS END  ---------------------------------------------- */
+
+
+/* ---------------------------------- MAIN SWIPER CSS  ---------------------------------------------- */
+
+.main_swiper_css .swiper-slide {
+    width: 100%;
+    height: 100vh;
+    color: var(--light_color);
+}
+
+.main_swiper_css .btns_wrapper {
+    position: absolute;
+    left: initial;
+    top: initial;
+    right: 70px;
+    bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.main_swiper_css .swiper-button-next,
+.main_swiper_css .swiper-button-prev  {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--light_color);
+    color: var(--dark_color);
+    transition: transform .2s ease-in-out;
+}
+
+.main_swiper_css .swiper-button-next:hover,
+.main_swiper_css .swiper-button-prev:hover {
+    transform: scale(1.05);
+}
+
+.main_swiper_css .swiper-button-prev {
+    /* right: 130px; */
+}
+
+.main_swiper_css .swiper-button-prev svg {
+    transform: rotate(180deg);
+}
+
+.swiper-button-next svg, .swiper-button-prev svg {
+    width: auto;
+    height: auto;
+}
+
+.main_swiper_css .swiper-button-next::after,
+.main_swiper_css .swiper-button-prev::after {
+    content: none;
+}
+
+.main_swiper_css .swiper-slide .img_wrapper {
+    position: relative;
+}
+
+.main_swiper_css .swiper-slide .img_wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.main_swiper_css .swiper-slide .img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_swiper_css .swiper-slide .content_wrapper .container-fluid {
+    opacity: 0;
+    bottom: 100px;
+    transition: opacity .4s ease-in-out;
+}
+
+.main_swiper_css .swiper-slide .content_wrapper .container-fluid hr {
+    border: none;
+    width: 100%;
+    opacity: .4;
+    border-top: 1px solid var(--light_color);
+}
+
+.main_swiper_css .swiper-slide .content_wrapper .container-fluid .dot {
+    display: flex;
+    align-items: start;
+    gap: 0 7px;
+    position: relative;
+}
+
+.main_swiper_css .swiper-slide .content_wrapper .container-fluid .dot::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-color: var(--light_color);
+}
+
+.main_swiper_css .swiper-slide .content_wrapper .container-fluid button {
+    padding: 10px 30px;
+    border-radius: 24px;
+    position: relative;
+    background-color: var(--light_color);
+}
+
+.main_swiper_css .swiper-slide.swiper-slide-active .content_wrapper .container-fluid .text_wrapper > *,
+.main_swiper_css .swiper-slide.swiper-slide-duplicate-active .content_wrapper .container-fluid .text_wrapper > * {
+    transform: translateY(0);
+    transition: transform .4s ease-in-out .5s;
+}
+
+.main_swiper_css .swiper-slide.swiper-slide-active .content_wrapper .container-fluid,
+.main_swiper_css .swiper-slide.swiper-slide-duplicate-active .content_wrapper .container-fluid {
+    opacity: 1;
+    transition: opacity .4s ease-in-out .5s;
+}
+
+/* ---------------------------------- Main Swiper CSS End ---------------------------------------------- */
+
+section.swiper_section .main_swiper_css .swiper-slide {
+    width: 100%;
+    height: 80vh;
+    color: var(--light_color);
+}
+
+section.swiper_section .main_swiper_css .swiper-slide .content_wrapper .container-fluid {
+    inset: 0;
+    padding-top: 100px;
+    bottom: auto;
+    height: 100%;
+}
+
+section.swiper_section .main_swiper_css .swiper-slide .content_wrapper button.hoverTextRepeater {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+section.swiper_section .main_swiper_css .btns_wrapper {
+    left: 50%;
+    bottom: 50px;
+    width: fit-content;
+    z-index: 1;
+    transform: translateX(-50%);
+}
