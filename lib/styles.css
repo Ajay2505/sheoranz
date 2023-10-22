@@ -218,6 +218,10 @@ html.lenis {
     background-color: var(--dark_color);
 }
 
+.dark_bg hr {
+    border-color: var(--light_color);
+}
+
 .text_wrapper {
     width: 100%;
     height: 100%;
@@ -236,6 +240,10 @@ html.lenis {
     color: var(--dark_color);
     padding: 10px 30px;
     border-radius: 24px;
+}
+
+.hoverBgBtn.black {
+    color: var(--light_color);
 }
 
 .hoverTextRepeater > *:first-child,
@@ -292,6 +300,10 @@ html.lenis {
     background-color: transparent;
 }
 
+.hoverBgBtn.black {
+    border: 1px solid var(--light_color);
+}
+
 .hoverBgBtn > *:last-child {
     position: absolute;
     inset: 0;
@@ -301,6 +313,11 @@ html.lenis {
     background-color: var(--dark_color);
     transform: translateY(100%);
     transition: transform .35s ease-in-out;
+}
+
+.hoverBgBtn.black > *:last-child {
+    color: var(--dark_color);
+    background-color: var(--light_color);
 }
 
 .hoverBgBtn:hover > *:last-child {
@@ -347,9 +364,37 @@ html.lenis {
     transform: scale(1.2);
 }
 
-.dark_bg hr {
-    
+.cicles_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px 0;
 }
+
+.circle_itself {
+    width: 100%;
+    max-width: 375px;
+    min-height: 375px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--light_color);
+}
+
+.circle_itself .inner_circle {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 70%);
+    height: calc(100% - 70%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--light_color);
+}
+
 /* ---------------------------------- UTILS END  ---------------------------------------------- */
 
 
