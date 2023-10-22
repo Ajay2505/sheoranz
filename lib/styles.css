@@ -222,6 +222,73 @@ html.lenis {
     border-color: var(--light_color);
 }
 
+.sectionHoverDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    border: 1px solid var(--dark_color);
+    background: linear-gradient(to bottom, transparent 50%, var(--dark_color) 50%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+    transition: background-position .4s ease-in-out;
+}
+
+.sectionHoverDot.black_bg {
+    border: 1px solid var(--light_color);
+    margin-top: -5px;
+    background: linear-gradient(to top, transparent 50%, var(--light_color) 50%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+
+section:hover .sectionHoverDot {
+    background-position: 100% 100%;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::before,
+.underline::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    pointer-events: none;
+    background-color: var(--dark_color);
+    transition: all .3s ease-in-out;
+}
+
+.underline.pre.black_bg::before {
+    background-color: var(--light_color);
+}
+
+.underline.pre.black_bg::after {
+    background-color: var(--dark_color);
+}
+
+.underline:hover::before {
+    width: 100%;
+}
+
+.underline.pre::before {
+    width: 100%;
+}
+
+.underline.pre::after {
+    width: 0;
+    background-color: var(--light_color);
+}
+
+.underline.pre:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
 .text_wrapper {
     width: 100%;
     height: 100%;
