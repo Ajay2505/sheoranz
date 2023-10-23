@@ -184,7 +184,7 @@ html.lenis {
 }
 
 .large_heading {
-    font-size: clamp(7vh, 10vw, 30vh);
+    font-size: clamp(70px, 9vw, 200px);
 }
 
 .main_heading {
@@ -358,6 +358,18 @@ section:hover .sectionHoverDot {
 
 .main_dot.black::before {
     background-color: var(--dark_color);
+}
+
+input.main_input {
+    outline: none;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 18px;
+    color: var(--light_color);
+    background-color: transparent;
+    padding: 0 20px;
+    border: 1px solid var(--light_color);
 }
 
 .hoverBgBtn {
@@ -545,10 +557,6 @@ section:hover .sectionHoverDot {
     transform: scale(1.05);
 }
 
-.main_swiper_css .swiper-button-prev {
-    /* right: 130px; */
-}
-
 .main_swiper_css .swiper-button-prev svg {
     transform: rotate(180deg);
 }
@@ -657,4 +665,40 @@ section.swiper_section .main_swiper_css .btns_wrapper {
     width: fit-content;
     z-index: 1;
     transform: translateX(-50%);
+}
+
+section.fixed_bg_section {
+    background-size: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/S_from_Samsung_Galaxy_S_logo.svg/725px-S_from_Samsung_Galaxy_S_logo.svg.png");
+    background-attachment: fixed;
+}
+
+section.newsletter_section {
+    min-height: 530px;
+}
+
+section.newsletter_section .bg_wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(104.01deg, #28302C 50.18%, rgba(51, 49, 50, 0) 168.55%);
+}
+
+section.newsletter_section .absolute_block {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+
+section.newsletter_section .absolute_block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.newsletter_section .content_wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
