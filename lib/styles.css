@@ -169,6 +169,44 @@ html.lenis {
 
 
 
+/* ---------------------------------- HEADER   ---------------------------------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    color: var(--light_color);    
+    padding: 30px 0;
+}
+
+header .absolute_block {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* opacity: 0; */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background: linear-gradient(rgba(37, 35, 36, 1) 0%, rgba(37, 35, 36, 0.987) 8.1%, rgba(37, 35, 36, 0.951) 15.5%, rgba(37, 35, 36, 0.896) 22.5%, rgba(37, 35, 36, 0.825) 29%, rgba(37, 35, 36, 0.741) 35.3%, rgba(37, 35, 36, 0.648) 41.2%, rgba(37, 35, 36, 0.55) 47.1%, rgba(37, 35, 36, 0.45) 52.9%, rgba(37, 35, 36, 0.352) 58.8%, rgba(37, 35, 36, 0.259) 64.7%, rgba(37, 35, 36, 0.175) 71%, rgba(37, 35, 36, 0.104) 77.5%, rgba(37, 35, 36, 0.049) 84.5%, rgba(37, 35, 36, 0.013) 91.9%, rgba(37, 35, 36, 0) 100%);
+    transition: clip-path .3s ease-in-out;
+}
+
+header > div.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+header.active_bg .absolute_block {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+/* ---------------------------------- HEADER END   ---------------------------------------------- */
+
+
 /* ---------------------------------- UTILS   ---------------------------------------------- */
 
 .main_spacer {
@@ -222,7 +260,7 @@ html.lenis {
     border-color: var(--light_color);
 }
 
-.sectionHoverDot {
+.hoverDot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -234,15 +272,15 @@ html.lenis {
     transition: background-position .4s ease-in-out;
 }
 
-.sectionHoverDot.black_bg {
+.hoverDot.black_bg {
     border: 1px solid var(--light_color);
     margin-top: -5px;
-    background: linear-gradient(to top, transparent 50%, var(--light_color) 50%);
+    background: linear-gradient(to bottom, transparent 50%, var(--light_color) 50%);
     background-position: 100% 0%;
     background-size: 100% 200%;
 }
 
-section:hover .sectionHoverDot {
+.hoverDotWrapper:hover .hoverDot {
     background-position: 100% 100%;
 }
 
