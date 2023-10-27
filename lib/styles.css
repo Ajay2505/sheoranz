@@ -50,6 +50,7 @@ strong {
 
 img, video {
     width: 100%;
+    user-select: none;
     vertical-align: middle;
 }
 
@@ -86,6 +87,10 @@ section {
 
 hr {
     border-color: #252324;
+}
+
+ul {
+    list-style: none;
 }
 
 .w-screen {
@@ -178,17 +183,23 @@ header {
     right: 0;
     z-index: 20;
     color: var(--light_color);    
-    padding: 30px 0;
+    padding: 20px 0;
+    pointer-events: none;
+}
+
+header * {
+    pointer-events: auto;
 }
 
 header .absolute_block {
     position: absolute;
     inset: 0;
     z-index: -1;
-    /* opacity: 0; */
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    opacity: 0;
+    pointer-events: none;
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
     background: linear-gradient(rgba(37, 35, 36, 1) 0%, rgba(37, 35, 36, 0.987) 8.1%, rgba(37, 35, 36, 0.951) 15.5%, rgba(37, 35, 36, 0.896) 22.5%, rgba(37, 35, 36, 0.825) 29%, rgba(37, 35, 36, 0.741) 35.3%, rgba(37, 35, 36, 0.648) 41.2%, rgba(37, 35, 36, 0.55) 47.1%, rgba(37, 35, 36, 0.45) 52.9%, rgba(37, 35, 36, 0.352) 58.8%, rgba(37, 35, 36, 0.259) 64.7%, rgba(37, 35, 36, 0.175) 71%, rgba(37, 35, 36, 0.104) 77.5%, rgba(37, 35, 36, 0.049) 84.5%, rgba(37, 35, 36, 0.013) 91.9%, rgba(37, 35, 36, 0) 100%);
-    transition: clip-path .3s ease-in-out;
+    transition: clip-path .3s ease-in-out, opacity .5s ease-in-out;
 }
 
 header > div.container {
@@ -200,17 +211,130 @@ header > div.container {
 }
 
 header.active_bg .absolute_block {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 1;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav a {
+    white-space: nowrap;
+}
+
+header nav .main_input {
+    border: 1px solid transparent;
+    color: var(--light_color);
+    padding-left: 40px;
+}
+
+header nav .searchWrapper label {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+}
+
+header nav .main_input:focus {
+    border: 1px solid var(--light_color);
+}
+
+header nav .main_input::placeholder {
+    color: var(--light_color);
+}
+
+header.activeContent nav [tab-status] {
+    transition: opacity .3s ease-in-out;
+}
+
+header.activeContent nav [tab-status="in-active"] {
+    opacity: .2;
 }
 
 
+header .navContent {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0; 
+    transition: opacity .05s ease-in-out .4s;
+}
+
+header.activeContent .navContent {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity .05s ease-in-out 0s;
+}
+
+header .navContent .content_wrapper {
+    width: 100%;
+    height: 66vh;
+    /* padding-top: 100px;   */
+    transform: translateY(-120%);
+    overflow-y: auto;
+    transition: transform .3s ease-in-out;
+}
+
+header.activeContent .navContent .content_wrapper {
+    transform: translateY(0);
+}
+
+header .navContent .content_wrapper [content-status] {
+    transition: opacity .3s ease-in-out;
+}
+
+header .navContent .content_wrapper [content-status="in-active"] {
+    /* display: none; */
+    opacity: 0;
+    /* transition: opacity .4s ease-in-out; */
+}
+
+header .navContent .content_wrapper [content-status="active"] {
+    opacity: 1;
+    /* transition: opacity .4s ease-in-out; */
+}
+
+header .navContent .bottom_text {
+    background-color: rgba(0,0,0,1);   
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+}
+
+header.activeContent .navContent .bottom_text {
+    transform: translateY(0);
+    transition: transform .3s ease-in-out;
+}
+
+header .navContent .bottom_text h1 {
+    transform: translateY(100%);
+    opacity: .15;
+    transition: transform .3s ease-in-out .5s;
+}
+
+header.activeContent .navContent .bottom_text h1 {
+    transform: translateY(0);
+}
+
 /* ---------------------------------- HEADER END   ---------------------------------------------- */
+
+
 
 
 /* ---------------------------------- UTILS   ---------------------------------------------- */
 
 .main_spacer {
     padding-block: 130px;
+}
+
+.small_spacer_top {
+    padding-top: 100px;
 }
 
 .main_spacer_top {
@@ -297,7 +421,12 @@ header.active_bg .absolute_block {
     bottom: -5px;
     pointer-events: none;
     background-color: var(--dark_color);
-    transition: all .3s ease-in-out;
+    transition: width .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out;
+}
+
+.underline.before-b-0::before,
+.underline.before-b-0::after {
+    bottom: 0;
 }
 
 .underline.pre.black_bg::before {
@@ -310,6 +439,7 @@ header.active_bg .absolute_block {
 
 .underline:hover::before {
     width: 100%;
+    transition: width .3s ease-in-out .3s, left .3s ease-in-out, right .3s ease-in-out;
 }
 
 .underline.pre::before {
@@ -345,6 +475,7 @@ header.active_bg .absolute_block {
     color: var(--dark_color);
     padding: 10px 30px;
     border-radius: 24px;
+    background-color: #fff;
 }
 
 .hoverBgBtn.black {
@@ -403,10 +534,10 @@ input.main_input {
     border-radius: 24px;
     width: 100%;
     max-width: 400px;
+    padding: 10px 20px;
     font-size: 18px;
     color: var(--light_color);
     background-color: transparent;
-    padding: 0 20px;
     border: 1px solid var(--light_color);
 }
 
