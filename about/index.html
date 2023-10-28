@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheoranz</title>
+    <link href="./fonts/HelveticaNeue-MediumExt.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="./fonts/HelveticaNeue-UltraLight.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/styles.css">
+</head>
+
+<body>
+
+    <header class="dark" data-lenis-prevent>
+        <div class="absolute_block"></div>
+        <div class="container">
+            <a href="/">
+                <div class="logo_wrapper">
+                    <p class="main_dot m-0">Sheoranz</p>
+                </div>
+            </a>
+            <nav class="mid d-none d-lg-flex">
+                <a data-target="tab_01" tab-status="in-active" class="main_navLink" href="javascript:void(0)">Projects</a>
+                <a data-target="tab_02" tab-status="in-active" class="main_navLink" href="javascript:void(0)">About us</a>
+            </nav>
+            <nav class="end d-none d-lg-flex">
+                <div data-target="tab_search" tab-status="in-active" class="hstack position-relative main_navLink searchWrapper">
+                    <label for="nav_search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </label>
+                    <input id="nav_search" type="text" placeholder="Search" class="main_input">
+                </div>
+                <a data-target="tab_03" tab-status="in-active" class="main_navLink" href="javascript:void(0)">Emi Calculator</a>
+            </nav>
+        </div>
+
+        <div class="navContent">
+            <div class="content_wrapper dark_bg">
+                <div class="small_spacer_top">
+                    <hr class="m-0 pb-4">      
+                </div>
+                <div data-target="tab_01" content-status="in-active" class="container d-none">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <p class="main_dot">Projects</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Discover all</p>
+                            <br>
+                            <ul class="d-flex p-0 flex-column gap-2 list-none">
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">HILL COUNTY</a>
+                                </li>
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">AGASTYA</a>
+                                </li>
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">PARGI</a>
+                                </li>
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">KADTHAL</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="right_img_wrapper">
+                                <img src="/assets/images/project-1.1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="tab_02" content-status="in-active" class="container d-none">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <p class="main_dot">About us</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><a class="underline pre" href="/about/">Info</a></p>
+                            <br>
+                            <ul class="d-flex p-0 flex-column gap-2 list-none">
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Invest in your Future</a>
+                                </li>
+                                <li>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Invest in us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="right_img_wrapper">
+                                <img src="/assets/images/project-1.1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="tab_search" content-status="in-active" class="container d-none">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <p class="main_dot">Popular Search</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="tab_03" content-status="in-active" class="container d-none">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <p class="main_dot">EMI Calculator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden bottom_text">
+                <h1 class="large_heading text-center">Sheoranz PVT Ltd.</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner_section main_spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h1 class="large_heading">
+                        About us
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards_section">
+        <hr class="m-0 pb-lg-5 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a class="card_wrapper hoverDotWrapper" href="#">
+                        <div class="img_wrapper position-relative overflow-hidden">
+                            <div class="hidden_buttons staggerWrapper d-flex flex-wrap gap-2 align-items-center position-absolute">
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Ceiling</span>
+                                    <span>Ceiling</span>
+                                </button>
+                            </div>
+                            <img src="/assets/images/card.webp" alt="">
+                            <div class="bottom_wrapper">
+                                <div class="staggerWrapper d-flex gap-2 flex-wrap align-items-center">
+                                    <div style="background-color: red;" class="colorPicker"></div>
+                                    <div style="background-color: brown;" class="colorPicker"></div>
+                                    <div style="background-color: blue;" class="colorPicker"></div>
+                                    <div style="background-color: green;" class="colorPicker"></div>
+                                    <p class="m-0">+19</p>
+                                </div>
+                                <p class="m-0 title">Form: Tile</p>
+                            </div>
+                        </div>
+                        <div class="hstack gap-2 pt-2 align-items-start">
+                            <div class="hoverDot"></div>
+                            <p>3d Ceiling Tiles</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="card_wrapper hoverDotWrapper" href="#">
+                        <div class="img_wrapper position-relative overflow-hidden">
+                            <div class="hidden_buttons staggerWrapper d-flex flex-wrap gap-2 align-items-center position-absolute">
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Wall</span>
+                                    <span>Wall</span>
+                                </button>
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Screen</span>
+                                    <span>Screen</span>
+                                </button>
+                            </div>
+                            <img src="/assets/images/card-2.png" alt="">
+                            <div class="bottom_wrapper">
+                                <div class="staggerWrapper d-flex gap-2 flex-wrap align-items-center">
+                                    <div style="background-color: green;" class="colorPicker"></div>
+                                    <div style="background-color: brown;" class="colorPicker"></div>
+                                    <div style="background-color: red;" class="colorPicker"></div>
+                                    <div style="background-color: blue;" class="colorPicker"></div>
+                                    <p class="m-0">+11</p>
+                                </div>
+                                <p class="m-0 title">Form: Screen</p>
+                            </div>
+                        </div>
+                        <div class="hstack gap-2 pt-2 align-items-start">
+                            <div class="hoverDot"></div>
+                            <p>Cascade</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main_spacer_bottom"></div>
+    </section>
+
+    <section class="large_card_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="img_wrapper position-relative">
+                        <div class="plus_wrapper one position-absolute">
+                            <div class="plus_inner position-relative">
+                                <div class="icon_wrapper">
+                                    <svg width="10px" height="10px" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.4739 21.5182C28.817 21.5182 27.4739 20.175 27.4739 18.5182V0.480469H20.9416V18.5182C20.9416 20.175 19.5985 21.5182 17.9416 21.5182H0V28.0504H17.9416C19.5985 28.0504 20.9416 29.3936 20.9416 31.0504V49.0881H27.4739V31.0504C27.4739 29.3936 28.817 28.0504 30.4739 28.0504H48.4155V21.5182H30.4739Z" fill="currentColor"></path></svg>
+                                </div>
+                                <div class="content_wrapper">
+                                    <h1 class="sub_heading">Acoustic Timber™</h1>
+                                    <p>Available in panels, baffles, or ceiling tiles, Acoustic Timber™ is a high-performance acoustic treatment designed to realistically imitate timber. To ensure a natural, high-end finish, we have hand-picked a selection of premium woodgrains taken from real timber veneers.                                    </p>
+                                    <br>
+                                    <button class="hoverBgBtn w-full">
+                                        <span>Frontier™</span>
+                                        <span>Frontier™</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plus_wrapper two position-absolute">
+                            <div class="plus_inner position-relative">
+                                <div class="icon_wrapper">
+                                    <svg width="10px" height="10px" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.4739 21.5182C28.817 21.5182 27.4739 20.175 27.4739 18.5182V0.480469H20.9416V18.5182C20.9416 20.175 19.5985 21.5182 17.9416 21.5182H0V28.0504H17.9416C19.5985 28.0504 20.9416 29.3936 20.9416 31.0504V49.0881H27.4739V31.0504C27.4739 29.3936 28.817 28.0504 30.4739 28.0504H48.4155V21.5182H30.4739Z" fill="currentColor"></path></svg>
+                                </div>
+                                <div class="content_wrapper">
+                                    <h1 class="sub_heading">Acoustic Timber™</h1>
+                                    <div class="img_wrapper mb-2">
+                                        <img src="/assets/images/hoverCard.webp" alt="">
+                                    </div>
+                                    <p>Acoustic Timber™ Raft™ Beam 100 in Oak Grain.</p>
+                                    <br>
+                                    <button class="hoverBgBtn w-full">
+                                        <span>Frontier™</span>
+                                        <span>Frontier™</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/images/large-card.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main_spacer_bottom"></section>
+
+    <section class="about_section">
+        <hr class="m-0 pb-lg-4 pb-2">
+        <div class="container hoverDotWrapper">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="hstack gap-2 pt-2 align-items-start">
+                        <div class="hoverDot"></div>
+                        <p>Sheoranz India PVT Ltd.</p>
+                    </div>
+                    <div class="h-full d-flex align-items-center justify-content-center flex-column">
+                        <h1 class="sub_heading">Beautiful acoustics for spaces where people live, work and learn.</h1>
+                        <p>Our acoustic solutions are designed to reduce and control reverberation and echo in building interiors, creating comfortable, acoustically balanced environments. The Autex Acoustics® range offers a variety of treatments including wallcoverings, panels, baffles, and screens—easily customised to fit the requirements of your space.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 ms-lg-auto">
+                    <div class="fixed_img_wrapper">
+                        <!-- <img src="/assets/images/about.webp" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="">
+        <div class="main_spacer_bottom"></div>
+    </section>
+
+    <!-- <div class="h-screen"></div> -->
+
+    <section class="newsletter_section dark_bg rev_select">
+        <div class="absolute_block">
+            <img src="/assets/images/pattern-news.webp" alt="">
+        </div>
+        <div class="bg_wrapper"></div>
+        <div class="content_wrapper py-5">
+            <div class="container h-full position-relative">
+                <div class="row h-full">
+                    <div class="col-lg-6">
+                        <h1 class="sec_heading">Newsletter subscribe</h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-end h-full w-full">
+                            <div class="d-flex flex-row flex-wrap flex-lg-nowrap gap-3 flex- w-full">
+                                <input type="text" class="main_input" placeholder="Enter your email here...">
+                                <button class="hoverTextRepeater">
+                                    <span>Subscribe</span>
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/gsap/gsap.min.js"></script>
+    <script src="/lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="/lib/lenis.min.js"></script>
+    <script src="/lib/script.js"></script>
+</body>
+
+</html>

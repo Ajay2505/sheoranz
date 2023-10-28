@@ -141,6 +141,10 @@ ul {
     color: #E23E32;
 }
 
+.row {
+    row-gap: 30px;
+}
+
 /* ---------------------------------- GLOBALS  START  ---------------------------------------------- */
 
 
@@ -187,6 +191,10 @@ header {
     pointer-events: none;
 }
 
+header.activeContent {
+    color: var(--light_color);
+}
+
 header * {
     pointer-events: auto;
 }
@@ -227,9 +235,10 @@ header nav a {
 }
 
 header nav .main_input {
-    border: 1px solid transparent;
+    border: 1px solid var(--light_color);
     color: var(--light_color);
     padding-left: 40px;
+    /* border-radius: 0; */
 }
 
 header nav .searchWrapper label {
@@ -241,9 +250,9 @@ header nav .searchWrapper label {
     place-items: center;
 }
 
-header nav .main_input:focus {
+/* header nav .main_input:focus {
     border: 1px solid var(--light_color);
-}
+} */
 
 header nav .main_input::placeholder {
     color: var(--light_color);
@@ -256,7 +265,6 @@ header.activeContent nav [tab-status] {
 header.activeContent nav [tab-status="in-active"] {
     opacity: .2;
 }
-
 
 header .navContent {
     position: fixed;
@@ -275,11 +283,10 @@ header.activeContent .navContent {
 
 header .navContent .content_wrapper {
     width: 100%;
-    height: 66vh;
     /* padding-top: 100px;   */
+    height: calc(100vh - clamp(70px, 9vw, 200px));
     transform: translateY(-120%);
-    overflow-y: auto;
-    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 }
 
 header.activeContent .navContent .content_wrapper {
@@ -287,18 +294,17 @@ header.activeContent .navContent .content_wrapper {
 }
 
 header .navContent .content_wrapper [content-status] {
+    height: calc(100vh - clamp(70px, 9vw, 200px) - 120px);
+    overflow-y: auto;
     transition: opacity .3s ease-in-out;
 }
 
 header .navContent .content_wrapper [content-status="in-active"] {
-    /* display: none; */
     opacity: 0;
-    /* transition: opacity .4s ease-in-out; */
 }
 
 header .navContent .content_wrapper [content-status="active"] {
     opacity: 1;
-    /* transition: opacity .4s ease-in-out; */
 }
 
 header .navContent .bottom_text {
@@ -321,6 +327,31 @@ header .navContent .bottom_text h1 {
 header.activeContent .navContent .bottom_text h1 {
     transform: translateY(0);
 }
+
+/* ---------------------------------- HEADER DARK   ---------------------------------------------- */
+
+header.dark:not(.activeContent) {
+    color: var(--dark_color);
+}
+
+header.dark:not(.activeContent) .absolute_block {
+    background: linear-gradient(rgb(255, 252, 245) 0%, rgba(255, 252, 245, 0.99) 8.1%, rgba(255, 252, 245, 0.953) 15.5%, rgba(255, 252, 245, 0.894) 22.5%, rgba(255, 252, 245, 0.824) 29%, rgba(255, 252, 245, 0.74) 35.3%, rgba(255, 252, 245, 0.647) 41.2%, rgba(255, 252, 245, 0.55) 47.1%, rgba(255, 252, 245, 0.45) 52.9%, rgba(255, 252, 245, 0.353) 58.8%, rgba(255, 252, 245, 0.26) 64.7%, rgba(255, 252, 245, 0.176) 71%, rgba(255, 252, 245, 0.106) 77.5%, rgba(255, 252, 245, 0.047) 84.5%, rgba(255, 252, 245, 0.01) 91.9%, rgba(255, 252, 245, 0) 100%);
+}
+
+header.dark:not(.activeContent) .main_dot::before {
+    background-color: var(--dark_color);
+}
+
+header.dark:not(.activeContent) nav .main_input {
+    border: 1px solid var(--dark_color);
+}
+
+header.dark:not(.activeContent) nav .main_input::placeholder {
+    color: var(--dark_color);
+}
+
+/* ---------------------------------- HEADER DARK END   ---------------------------------------------- */
+
 
 /* ---------------------------------- HEADER END   ---------------------------------------------- */
 
@@ -347,6 +378,7 @@ header.activeContent .navContent .bottom_text h1 {
 
 .large_heading {
     font-size: clamp(70px, 9vw, 200px);
+    /* ctrl + f and replace to change the font size */
 }
 
 .main_heading {
@@ -542,10 +574,13 @@ input.main_input {
 }
 
 .hoverBgBtn {
-    min-width: 350px;
     border: 1px solid rgba(37, 35, 36, 0.2);
     padding: 10px 30px;
     background-color: transparent;
+}
+
+.hoverBgBtn.large {
+    min-width: 350px;
 }
 
 .hoverBgBtn.black {
@@ -643,6 +678,82 @@ input.main_input {
     border: 1px solid var(--light_color);
 }
 
+.card_wrapper .hidden_buttons {
+    top: 5%;
+    left: 5%;
+}
+
+.card_wrapper .img_wrapper {
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.card_wrapper .bottom_wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    transform: translateY(100%);
+    background-color: rgba(255, 252, 245, 0.5);
+    transition: transform .3s ease-in-out;
+}
+
+.card_wrapper:hover .bottom_wrapper {
+    transform: translateY(0);
+}
+
+.card_wrapper .bottom_wrapper .colorPicker {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.card_wrapper .staggerWrapper > * {
+    opacity: 0;
+    transition: opacity .35s ease-in-out;
+}
+
+.card_wrapper:hover .staggerWrapper > * {
+    opacity: 1;
+}
+
+.staggerWrapper > *:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.staggerWrapper > *:nth-child(3) {
+    transition-delay: .25s;
+}
+
+.staggerWrapper > *:nth-child(4) {
+    transition-delay: .3s;
+}
+
+.staggerWrapper > *:nth-child(5) {
+    transition-delay: .35s;
+}
+
+.staggerWrapper > *:nth-child(6) {
+    transition-delay: .4s;
+}
+
+.staggerWrapper > *:nth-child(7) {
+    transition-delay: .45s;
+}
+
+.staggerWrapper > *:nth-child(8) {
+    transition-delay: .5s;
+}
+
 /* ---------------------------------- UTILS END  ---------------------------------------------- */
 
 
@@ -684,6 +795,12 @@ input.main_input {
 
 .large_heading_block .large_heading .icon svg path {
     transition: d .5s ease-in-out;
+}
+
+.banner_section {
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-end;
 }
 
 /* ---------------------------------- COMMON BLOCKS END  ---------------------------------------------- */
@@ -807,7 +924,11 @@ input.main_input {
     transition: opacity .4s ease-in-out .5s;
 }
 
-/* ---------------------------------- Main Swiper CSS End ---------------------------------------------- */
+/* ---------------------------------- MAIN SWIPER CSS END ---------------------------------------------- */
+
+
+
+/* ---------------------------------- MAIN CSS ---------------------------------------------- */
 
 section.swiper_section .main_swiper_css .swiper-slide {
     width: 100%;
@@ -871,3 +992,67 @@ section.newsletter_section .content_wrapper {
     inset: 0;
     z-index: 1;
 }
+
+section.large_card_section .img_wrapper {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    max-height: 100vh;
+}
+
+section.large_card_section .img_wrapper .plus_wrapper.one {
+    left: calc(100% - 40%);
+}
+
+section.large_card_section .img_wrapper .plus_wrapper.two {
+    left: calc(100% - 20%);
+    top: calc(100% - 40%);
+}
+
+section.large_card_section .img_wrapper .plus_wrapper .icon_wrapper {
+    width: clamp(30px, 4vw, 50px);
+    height: clamp(30px, 4vw, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--light_color);
+}
+
+section.large_card_section .img_wrapper .plus_wrapper .content_wrapper {
+    position: absolute;
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .4s ease-in-out;
+    transform-origin: center;
+}
+
+section.large_card_section .img_wrapper .plus_wrapper:hover .content_wrapper {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+section.large_card_section .img_wrapper .plus_wrapper .content_wrapper .img_wrapper {
+    border-radius: 15px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+section.about_section .fixed_img_wrapper {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-position: center;
+    background-image: url("../assets/images/about.webp");
+}
+
+/* ---------------------------------- MAIN CSS END ---------------------------------------------- */

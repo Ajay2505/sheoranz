@@ -13,7 +13,8 @@
 </head>
 
 <body>
-
+    <!-- <header class="site-header <?php echo esc_attr(get_post_meta(get_the_ID(), 'header_class', true)); ?>"> -->
+        
     <header data-lenis-prevent>
         <div class="absolute_block"></div>
         <div class="container">
@@ -40,10 +41,10 @@
         </div>
 
         <div class="navContent">
-            <div class="dark_bg small_spacer_top">
-                <hr class="m-0">                
-            </div>
-            <div class="content_wrapper dark_bg pt-4">
+            <div class="content_wrapper dark_bg">
+                <div class="small_spacer_top">
+                    <hr class="m-0 pb-4">      
+                </div>
                 <div data-target="tab_01" content-status="in-active" class="container d-none">
                     <div class="row">
                         <div class="col-lg-3">
@@ -80,14 +81,14 @@
                             <p class="main_dot">About us</p>
                         </div>
                         <div class="col-md-6">
-                            <p><a href="#">Info</a></p>
+                            <p><a class="underline pre" href="/about/">Info</a></p>
                             <br>
                             <ul class="d-flex p-0 flex-column gap-2 list-none">
                                 <li>
-                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Contact Us</a>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Invest in your Future</a>
                                 </li>
                                 <li>
-                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Our team</a>
+                                    <a class="sub_heading underline pre before-b-0 d-inline-block h-full" href="#">Invest in us</a>
                                 </li>
                             </ul>
                         </div>
@@ -348,7 +349,7 @@
                             </span>
                         </h1>
                         <br>
-                        <button class="hoverBgBtn">
+                        <button class="hoverBgBtn large">
                             <span>Discover all projects</span>
                             <span>Discover all projects</span>
                         </button>
@@ -493,7 +494,7 @@
                 <div class="col-lg-6">
                     <div class="mid_content">
                         <h1 class="sub_heading mb-4">Affordable properties, own before its gone!</h1>
-                        <button class="hoverBgBtn">
+                        <button class="hoverBgBtn large">
                             <span>Frontier™</span>
                             <span>Frontier™</span>
                         </button>                        
@@ -542,7 +543,7 @@
                 <div class="col-lg-6">
                     <div class="mid_content">
                         <h1 class="sub_heading mb-4">Experts to Advise you on the value, holding and returns on the property you wish to land.</h1>
-                        <button class="hoverBgBtn">
+                        <button class="hoverBgBtn large">
                             <span>Frontier™</span>
                             <span>Frontier™</span>
                         </button>                        
@@ -593,7 +594,7 @@
                 <div class="col-lg-6">
                     <div class="mid_content">
                         <h1 class="sub_heading mb-4">Ready to build plots with a variety of Amenities and the best surrounding you could invest in.</h1>
-                        <button class="hoverBgBtn">
+                        <button class="hoverBgBtn large">
                             <span>Frontier™</span>
                             <span>Frontier™</span>
                         </button>                        
@@ -654,7 +655,7 @@
                             </span>
                         </h1>
                         <br>
-                        <button class="hoverBgBtn">
+                        <button class="hoverBgBtn large">
                             <span>About us</span>
                             <span>About us</span>
                         </button>
@@ -715,7 +716,7 @@
                 <div class="col-lg-7 mx-auto">
                     <h2 class="ter_heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis doloremque, ab unde neque aliquam quas maxime mollitia, exercitationem sit officiis amet! Pariatur porro placeat iure quis excepturi est cum aut!</h2>
                     <br>
-                    <button class="hoverBgBtn black">
+                    <button class="hoverBgBtn large black">
                         <span>Learn more</span>
                         <span>Learn more</span>
                     </button>
@@ -730,7 +731,7 @@
                 <div class="col-lg-6">
                     <div class="hoverDotWrapper">
                         <div class="hoverScaleImg">
-                            <img src="https://www.autexacoustics.com/_next/image?url=https%3A%2F%2Fcms.autexacoustics.co.nz%2Fus%2Fwp-content%2Fuploads%2Fsites%2F4%2F2022%2F09%2F01_Custom_Frontier_Custom_Cube_Autex_Richmond_Office-2-scaled.jpg&w=1080&q=75" alt="">
+                            <img src="./assets/images/bg-01.webp" alt="">
                         </div>
                         <div class="mt-3 hstack gap-2">
                             <div class="hoverDot black_bg"></div>
@@ -743,7 +744,7 @@
                     <div class="main_spacer"></div>
                     <div class="hoverDotWrapper">
                         <div class="hoverScaleImg">
-                            <img src="https://www.autexacoustics.com/_next/image?url=https%3A%2F%2Fcms.autexacoustics.co.nz%2Fus%2Fwp-content%2Fuploads%2Fsites%2F4%2F2022%2F09%2F02_Groove-scaled.jpg&w=1080&q=75" alt="">
+                            <img src="./assets/images/bg-02.webp" alt="">
                         </div>
                         <div class="mt-3 hstack gap-2">
                             <div class="hoverDot black_bg"></div>
@@ -759,7 +760,7 @@
                 <div class="col-lg-6 mx-auto">
                     <div class="hoverDotWrapper">
                         <div class="hoverScaleImg">
-                            <img src="https://www.autexacoustics.com/_next/image?url=https%3A%2F%2Fcms.autexacoustics.co.nz%2Fus%2Fwp-content%2Fuploads%2Fsites%2F4%2F2022%2F08%2F03_Etch_Massey_University_Lower_Gallery-scaled.jpg&w=1080&q=75" alt="">
+                            <img src="./assets/images/bg-03.webp" alt="">
                         </div>
                         <div class="mt-3 hstack gap-2">
                             <div class="hoverDot black_bg"></div>
@@ -775,7 +776,7 @@
                 <div class="col-lg-6">
                     <div class="hoverDotWrapper">
                         <div class="hoverScaleImg">
-                            <img src="https://www.autexacoustics.com/_next/image?url=https%3A%2F%2Fcms.autexacoustics.co.nz%2Fus%2Fwp-content%2Fuploads%2Fsites%2F4%2F2022%2F09%2F04_Frontier-scaled.jpg&w=1080&q=75" alt="">
+                            <img src="./assets/images/bg-04.webp" alt="">
                         </div>
                         <div class="mt-3 hstack gap-2">
                             <div class="hoverDot black_bg"></div>
@@ -790,7 +791,7 @@
                     <div class="py-5"></div>
                     <div class="hoverDotWrapper">
                         <div class="hoverScaleImg">
-                            <img src="https://www.autexacoustics.com/_next/image?url=https%3A%2F%2Fcms.autexacoustics.co.nz%2Fus%2Fwp-content%2Fuploads%2Fsites%2F4%2F2022%2F08%2F05_Printed_Cube_Lower_Gallery-scaled.jpg&w=1080&q=75" alt="">
+                            <img src="./assets/images/bg-05.webp" alt="">
                         </div>
                         <div class="mt-3 hstack gap-2">
                             <div class="hoverDot black_bg"></div>
