@@ -145,7 +145,11 @@ ul {
     row-gap: 30px;
 }
 
-/* ---------------------------------- GLOBALS  START  ---------------------------------------------- */
+.opacity-05 {
+    opacity: .5;
+}
+
+/* ---------------------------------- GLOBALS  END  ---------------------------------------------- */
 
 
 /* ---------------------------------- LENIS START  ---------------------------------------------- */
@@ -754,6 +758,22 @@ input.main_input {
     transition-delay: .5s;
 }
 
+.round_links_wrapper a {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(37, 35, 36, 0.2);
+    border-radius: 50%;
+    transform-origin: center;
+    transition: transform .2s ease-in-out;
+}
+
+.round_links_wrapper a:hover {
+    transform: scale(1.1);
+}
+
+
 /* ---------------------------------- UTILS END  ---------------------------------------------- */
 
 
@@ -1029,11 +1049,11 @@ section.large_card_section .img_wrapper .plus_wrapper .content_wrapper {
     top: 50%;
     left: 50%;
     padding: 15px;
-    border-radius: 15px;
     background-color: #fff;
+    border-radius: 15px;
     transform: translate(-50%, -50%) scale(0);
-    transition: transform .4s ease-in-out;
     transform-origin: center;
+    transition: transform .4s ease-in-out;
 }
 
 section.large_card_section .img_wrapper .plus_wrapper:hover .content_wrapper {
@@ -1052,7 +1072,7 @@ section.about_section .fixed_img_wrapper {
     background-repeat: no-repeat;
     min-height: 600px;
     background-position: center;
-    background-image: url("../assets/images/about.webp");
+    
 }
 
 /* ---------------------------------- MAIN CSS END ---------------------------------------------- */
