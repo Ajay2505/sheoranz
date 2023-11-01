@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheoranz</title>
-    <link href="/fonts/HelveticaNeue-MediumExt.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="/fonts/HelveticaNeue-UltraLight.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="./fonts/HelveticaNeue-MediumExt.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="./fonts/HelveticaNeue-UltraLight.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/lib/styles.css">
 </head>
 
 <body>
-        
-    <header data-lenis-prevent>
+
+    <header class="dark" data-lenis-prevent>
         <div class="absolute_block"></div>
         <div class="container">
             <a href="/">
@@ -119,218 +119,183 @@
         </div>
     </header>
 
-    <section class="about_main_section dark_bg main_spacer rev_select">
+    <section class="banner_section main_spacer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 mx-auto">
-                    <h1 class="medium_heading">How a casual after-work drink grew into an award-winning global design business</h1>
-                    <!-- <span class="span_img_wrapper">
-                        <img src="/assets/images/beer.webp" alt="">
-                    </span> -->                        
+                <div class="col-lg-10">
+                    <h1 class="large_heading">
+                        About us
+                    </h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="history_section" class="history_section dark_bg rev_select">
-        <hr class="m-0">
-        <div class="container pt-3">
+    <section class="cards_section">
+        <hr class="m-0 pb-lg-5 pb-2">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <p class="main_dot">Sheoranz India PVT Ltd.</p>
+                    <a class="card_wrapper hoverDotWrapper" href="#">
+                        <div class="img_wrapper position-relative overflow-hidden">
+                            <div class="hidden_buttons staggerWrapper d-flex flex-wrap gap-2 align-items-center position-absolute">
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Ceiling</span>
+                                    <span>Ceiling</span>
+                                </button>
+                            </div>
+                            <img src="/assets/images/card.webp" alt="">
+                            <div class="bottom_wrapper">
+                                <div class="staggerWrapper d-flex gap-2 flex-wrap align-items-center">
+                                    <div style="background-color: red;" class="colorPicker"></div>
+                                    <div style="background-color: brown;" class="colorPicker"></div>
+                                    <div style="background-color: blue;" class="colorPicker"></div>
+                                    <div style="background-color: green;" class="colorPicker"></div>
+                                    <p class="m-0">+19</p>
+                                </div>
+                                <p class="m-0 title">Form: Tile</p>
+                            </div>
+                        </div>
+                        <div class="hstack gap-2 pt-2 align-items-start">
+                            <div class="hoverDot"></div>
+                            <p>3d Ceiling Tiles</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-6">
-                    <p class="main_dot">From 1967 to the present</p>
+                    <a class="card_wrapper hoverDotWrapper" href="#">
+                        <div class="img_wrapper position-relative overflow-hidden">
+                            <div class="hidden_buttons staggerWrapper d-flex flex-wrap gap-2 align-items-center position-absolute">
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Wall</span>
+                                    <span>Wall</span>
+                                </button>
+                                <button class="hoverTextRepeater p-2 px-4">
+                                    <span>Screen</span>
+                                    <span>Screen</span>
+                                </button>
+                            </div>
+                            <img src="/assets/images/card-2.png" alt="">
+                            <div class="bottom_wrapper">
+                                <div class="staggerWrapper d-flex gap-2 flex-wrap align-items-center">
+                                    <div style="background-color: green;" class="colorPicker"></div>
+                                    <div style="background-color: brown;" class="colorPicker"></div>
+                                    <div style="background-color: red;" class="colorPicker"></div>
+                                    <div style="background-color: blue;" class="colorPicker"></div>
+                                    <p class="m-0">+11</p>
+                                </div>
+                                <p class="m-0 title">Form: Screen</p>
+                            </div>
+                        </div>
+                        <div class="hstack gap-2 pt-2 align-items-start">
+                            <div class="hoverDot"></div>
+                            <p>Cascade</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="main_spacer_bottom"></div>
+    </section>
 
-        <div class="heading_block sticky_top z-2 dark_bg small_spacer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h1 class="medium_heading">Our Story</h1>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="swiper aboutSwiper w-full h-full">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide w-full h-fit">
-                                <h1 class="medium_heading m-0 text-nowrap">1967</h1>
-                              </div>
-                              <div class="swiper-slide w-full h-fit">
-                                <h1 class="medium_heading m-0 text-nowrap">1960s - 1970s</h1>
-                              </div>
-                              <div class="swiper-slide w-full h-fit">
-                                <h1 class="medium_heading m-0 text-nowrap">1980s</h1>
-                              </div>
-                              <div class="swiper-slide w-full h-fit">
-                                <h1 class="medium_heading m-0 text-nowrap">1990s</h1>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="m-0">
-        </div>
-
-        <div class="sticky_top h-full year_block dark_bg">
-            <hr class="m-0 pb-3">
-            <div class="content_block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="main_dot">1967</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="main_dot">Established in 1967</p>
-                            <div class="small_spacer">
-                                <p class="sub_heading">Our roots lie in the highly regulated New Zealand economy of the 1960s and 1970s. The family-based company—now with the third generation making its mark—has grown into one of Australasia’s manufacturing success stories as a leader in modern acoustic products and environmentally friendly polyester insulation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="m-0">
-            </div>
-            <div class="images_block dark_bg pt-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 hoverScaleImg">
-                            <div class="">
-                                <div class="img_wrapper">
-                                    <img src="/assets/images/about-1.webp" alt="">
+    <section class="large_card_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="img_wrapper position-relative">
+                        <div class="plus_wrapper one position-absolute">
+                            <div class="plus_inner position-relative">
+                                <div class="icon_wrapper">
+                                    <svg width="10px" height="10px" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.4739 21.5182C28.817 21.5182 27.4739 20.175 27.4739 18.5182V0.480469H20.9416V18.5182C20.9416 20.175 19.5985 21.5182 17.9416 21.5182H0V28.0504H17.9416C19.5985 28.0504 20.9416 29.3936 20.9416 31.0504V49.0881H27.4739V31.0504C27.4739 29.3936 28.817 28.0504 30.4739 28.0504H48.4155V21.5182H30.4739Z" fill="currentColor"></path></svg>
+                                </div>
+                                <div class="content_wrapper">
+                                    <h1 class="sub_heading">Acoustic Timber™</h1>
+                                    <p>Available in panels, baffles, or ceiling tiles, Acoustic Timber™ is a high-performance acoustic treatment designed to realistically imitate timber. To ensure a natural, high-end finish, we have hand-picked a selection of premium woodgrains taken from real timber veneers.                                    </p>
+                                    <br>
+                                    <button class="hoverBgBtn w-full">
+                                        <span>Frontier™</span>
+                                        <span>Frontier™</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 hoverScaleImg">
-                            <div class="">
-                                <div class="img_wrapper">
-                                    <img src="/assets/images/about-2.webp" alt="">
+                        <div class="plus_wrapper two position-absolute">
+                            <div class="plus_inner position-relative">
+                                <div class="icon_wrapper">
+                                    <svg width="10px" height="10px" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.4739 21.5182C28.817 21.5182 27.4739 20.175 27.4739 18.5182V0.480469H20.9416V18.5182C20.9416 20.175 19.5985 21.5182 17.9416 21.5182H0V28.0504H17.9416C19.5985 28.0504 20.9416 29.3936 20.9416 31.0504V49.0881H27.4739V31.0504C27.4739 29.3936 28.817 28.0504 30.4739 28.0504H48.4155V21.5182H30.4739Z" fill="currentColor"></path></svg>
+                                </div>
+                                <div class="content_wrapper">
+                                    <h1 class="sub_heading">Acoustic Timber™</h1>
+                                    <div class="img_wrapper mb-2">
+                                        <img src="/assets/images/hoverCard.webp" alt="">
+                                    </div>
+                                    <p>Acoustic Timber™ Raft™ Beam 100 in Oak Grain.</p>
+                                    <br>
+                                    <button class="hoverBgBtn w-full">
+                                        <span>Frontier™</span>
+                                        <span>Frontier™</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main_spacer_top"></div>
-        </div>
-
-        <div class="sticky_top h-full year_block dark_bg">
-            <hr class="m-0 pb-3">
-            <div class="content_block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="main_dot">1960s - 1970s</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="main_dot">Our history</p>
-                            <div class="small_spacer">
-                                <p class="sub_heading">Our roots lie in the highly regulated New Zealand economy of the 1960s and 1970s. The family-based company—now with the third generation making its mark—has grown into one of Australasia’s manufacturing success stories as a leader in modern acoustic products and environmentally friendly polyester insulation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="m-0">
-            </div>
-            <div class="images_block dark_bg pt-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 hoverScaleImg">
-                            <div class="">
-                                <div class="img_wrapper">
-                                    <img src="/assets/images/about-1.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main_spacer_top"></div>
-        </div>
-
-        <div class="sticky_top h-full year_block dark_bg">
-            <hr class="m-0 pb-3">
-            <div class="content_block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="main_dot">1980s</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="main_dot">Growth and diversification</p>
-                            <div class="small_spacer">
-                                <p class="sub_heading">Through the 1980s we diversified moving into new markets and learnt to innovate in order to remain competitive within our industry. In 1986 we moved into 702 Rosebank Road where we have remained to this day.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="m-0">
-            </div>
-            <div class="images_block dark_bg pt-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 hoverScaleImg">
-                            <div class="">
-                                <div class="img_wrapper">
-                                    <img src="/assets/images/about-1.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 hoverScaleImg">
-                            <div class="">
-                                <div class="img_wrapper">
-                                    <img src="/assets/images/about-2.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main_spacer_top"></div>
-        </div>
-
-        <div class="sticky_top h-full year_block dark_bg">
-            <hr class="m-0 pb-3">
-            <div class="content_block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="main_dot">1990s</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="main_dot">Consolidation</p>
-                            <div class="small_spacer">
-                                <p class="sub_heading">The 1990s brought a period of consolidation as the business focus moved towards innovating in the polyester product space. As offices were established in Australia, each move was aligned with a restructure of the business. With a new head office and factory being built in 1998 and celebrations for reaching 25 years in business, it was an event filled decade.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="m-0">
-            </div>
-            <div style="background-image: url('/assets/images/bg-img-about.webp');" class="bg_img_block"></div>
-            <div class="main_spacer_top"></div>
-        </div>
-
-        <div class="sticky_top h-full z-3 dark_bg final_block">
-            <hr class="m-0 pb-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="main_dot">Our Values</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="main_dot">Our vision and mission</p>
-                        <div class="content main_spacer">
-                            <p class="sub_heading mb-lg-5 mb-3">We are creatives and innovators with a desire to improve the way we build by developing unique products that transform spaces. We understand the importance of healthy buildings and the part our thermal and acoustic products play in their performance. We recognise we are on a journey and are investing in improving how we operate. This is evident from the materials we use and the way we manufacture, through to investing in a sustainable planet and challenging what is currently being done in the design space.</p>
-                            <p class="sub_heading mb-lg-5 mb-3">We are creatives and innovators with a desire to improve the way we build by developing unique products that transform spaces. We understand the importance of healthy buildings and the part our thermal and acoustic products play in their performance. We recognise we are on a journey and are investing in improving how we operate. This is evident from the materials we use and the way we manufacture, through to investing in a sustainable planet and challenging what is currently being done in the design space.</p>
-                            <p class="sub_heading mb-lg-5 mb-3">We are creatives and innovators with a desire to improve the way we build by developing unique products that transform spaces. We understand the importance of healthy buildings and the part our thermal and acoustic products play in their performance. We recognise we are on a journey and are investing in improving how we operate. This is evident from the materials we use and the way we manufacture, through to investing in a sustainable planet and challenging what is currently being done in the design space.</p>
-                        </div>
+                        <img src="/assets/images/large-card.webp" alt="">
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
+    <section class="main_spacer_top"></section>
+
+    <section class="box_animation_section main_spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="sec_heading m-0 mb-3">Let's create something extraordinary</h1>
+                    <p class="main_dot">Customisation</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 mx-auto">
+                    <div class="main_block mx-auto position-relative">
+                        <div class="main_img_wrapper position-relative">
+                            <img src="/assets/images/cut-block.webp" alt="">
+                        </div>
+                        <div class="small_img_wrapper position-absolute">
+                            <div class="position-relative img_wrapper">
+                                <img src="/assets/images/small-block.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main_spacer_top"></section>
+
+    <section class="about_section">
+        <hr class="m-0 pb-lg-4 pb-2">
+        <div class="container hoverDotWrapper">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="hstack gap-2 pt-2 align-items-start">
+                        <div class="hoverDot"></div>
+                        <p>Sheoranz India PVT Ltd.</p>
+                    </div>
+                    <div class="h-full d-flex align-items-center justify-content-center flex-column">
+                        <h1 class="sub_heading">Beautiful acoustics for spaces where people live, work and learn.</h1>
+                        <p>Our acoustic solutions are designed to reduce and control reverberation and echo in building interiors, creating comfortable, acoustically balanced environments. The Autex Acoustics® range offers a variety of treatments including wallcoverings, panels, baffles, and screens—easily customised to fit the requirements of your space.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 ms-lg-auto">
+                    <div class="fixed_img_wrapper" style='background-image: url("/assets/images/about.webp");'></div>
+                </div>
+            </div>
+        </div>
+        <hr class="">
+        <div class="main_spacer_bottom"></div>
     </section>
 
     <section class="newsletter_section dark_bg rev_select">
@@ -433,4 +398,4 @@
     <script src="/lib/script.js"></script>
 </body>
 
-</html> 
+</html>
