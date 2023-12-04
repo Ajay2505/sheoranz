@@ -524,9 +524,8 @@ input.main_input::placeholder {
 }
 
 .circle_itself {
-    width: 100%;
-    max-width: 340px;
-    min-height: 340px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -543,6 +542,44 @@ input.main_input::placeholder {
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid var(--light_color);
+}
+
+.circle_itself .inner_img {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 1;
+    display: grid;
+    place-items: center;
+    padding: 50px;
+}
+
+.circle_itself .inner_img img {
+    max-width: 100px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out 0s;
+}
+
+.circle_itself:hover .inner_img img {
+    opacity: 1;
+    transition: opacity .3s ease-in-out .2s;
+}
+
+.circle_itself .inner_img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* opacity: 0; */
+    transform: scale(0);
+    border-radius: 50%;
+    background-color: var(--light_color);
+    transition: transform .3s ease-in-out, opacity .4s ease-in-out;
+}
+
+.circle_itself:hover .inner_img::after {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .card_wrapper .hidden_buttons {
