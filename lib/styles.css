@@ -320,7 +320,7 @@ html.lenis {
     left: 0;
 }
 
-.underline.rev:hover::before {
+.underline.rev.active::before {
     left: auto;
     right: 0;
     width: 0;
